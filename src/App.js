@@ -1,22 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import data from './assets/mock-data.json';
+import Card from './components/Card.js';
+import Tiler from './components/Tiler.js';
 
 function App() {
+  const [items] = useState(data);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Cards grid</h1>
+        <Tiler key="tiler" items={items} card={Card}  />
       </header>
     </div>
   );

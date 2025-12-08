@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Tesla",
+    "text": "Best company",
+    "currentLikes": 7
+  },
+  {
+    "title": "VK",
+    "text": "Messenger for children",
+    "currentLikes": 2
+  },
+  {
+    "title": "Me",
+    "text": "Worst student",
+    "currentLikes": -1
+  },
+  {
+    "title": "Item",
+    "text": "Some other item",
+    "currentLikes": 0
+  },
+  {
+    "title": "UNreal article",
+    "text": "UNreal text for real article",
+    "currentLikes": 666
+  },
+  {
+    "title": "Te$ter artic1e",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "currentLikes": 9007199254741004
+  },
+  {
+    "title": "Te$ter artic1e vol2",
+    "text": "Remember the first likes number. Like and then Unlike me. try same for the left card. Also you can try to shrink browser window. Reload the page",
+    "currentLikes": 9007199254740992
+  },
+  {
+    "title": "Real article",
+    "text": "Real text for real article",
+    "currentLikes": 11
+  }
+]
