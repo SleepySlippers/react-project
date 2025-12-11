@@ -1,8 +1,14 @@
 import { useState } from 'react';
+import CommentSection from './CommentSection.js';
 
-function Card({ item }) {
+function Card({ item, getComments }) {
   const [likes, setLikes] = useState(item.currentLikes);
   const [isLiked, setIsLiked] = useState(false);
+  const [isCommentSectionHidden, setCommentSectionHidden] = useState(true);
+
+  const toggleCommentSection = () => {
+    setCommentSectionHidden(!isCommentSectionHidden);
+  };
 
   const toggleLike = () => {
     if (isLiked) {
@@ -27,10 +33,10 @@ function Card({ item }) {
       <h3>{item.title}</h3>
       <p>{item.text}</p>
       <div style={{ marginTop: 'auto' }}>
-        <button 
+        <button
           onClick={toggleLike}
-          style={{ 
-            backgroundColor: isLiked ? '#e91e63' : '#dddddd', 
+          style={{
+            backgroundColor: isLiked ? '#e91e63' : '#dddddd',
             color: isLiked ? 'white' : 'black',
             border: 'none', padding: '8px 12px', borderRadius: '4px',
             cursor: 'pointer'
@@ -39,6 +45,24 @@ function Card({ item }) {
           {isLiked ? '❤️' : '🤍'}
         </button>
         <span> {likes}</span>
+      </div>
+      <div style={{ marginTop: 'auto' }}>
+        <button
+          onClick={toggleCommentSection}
+          style={{
+            backgroundColor: '#dddddd',
+            color: 'black',
+            border: 'none', padding: '8px 12px', borderRadius: '4px',
+            cursor: 'pointer'
+          }}
+        >
+          {isCommentSectionHidden ? '☰' : '✕'}
+        </button>
+        <span> Discuss ({item.commentsCount}) </span>
+        {
+          !isCommentSectionHidden &&
+          <CommentSection articleId={item.articleId} getComments={getComments} />
+        }
       </div>
     </div>
   );
