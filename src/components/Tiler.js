@@ -29,7 +29,12 @@ function Tiler({ getArticles, getComments, card: CardComponent }) {
       }}>
         {
           articles.map(item => (
-            <CardComponent key={item.id} item={item} getComments={getComments} />
+            <CardComponent
+              key={item.id}
+              item={item}
+              getComments={getComments}
+              shortenedVersion={true}
+            />
           ))
         }
       </div>
