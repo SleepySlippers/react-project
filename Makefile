@@ -22,3 +22,6 @@ wipe_repo:
 
 run:
 	$(RUN_INSIDE_CONTAINER) npm run start
+
+install_react_router_dom:
+	$(RUN_INSIDE_CONTAINER) npm install react-router-dom
