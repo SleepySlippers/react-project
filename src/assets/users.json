@@ -1,0 +1,10 @@
+[
+  {
+    "username": "admin",
+    "passwordHash": "adminMyGreatestSalt"
+  },
+  {
+    "username": "user",
+    "passwordHash": "userMyGreatestSalt"
+  }
+]
