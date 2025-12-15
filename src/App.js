@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage.js';
 import ArticlesList from './pages/ArticlesList.js';
 import ArticleDetail from './pages/ArticleDetail.js';
 import NotFound from './pages/NotFound.js';
+import AuthPage from './pages/AuthPage.js';
 
 function App() {
   const [items] = useState(data);
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/articles" element={<ArticlesList getArticles={getArticles} getComments={getComments} card={Card} />} />
             <Route path="/articles/:articleId" element={<ArticleDetail getArticles={getArticles} getComments={getComments} card={Card} />} />
+            <Route path="/auth" element={<AuthPage />} />
             <Route path="/404" element={<NotFound />} />
             <Route path="*" element={<Navigate to="/404" replace />} />
           </Routes>
